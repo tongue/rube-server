@@ -11,6 +11,7 @@ app.get("/", function (req, res) {
 
 app.get("/end", function (req, res) {
   io.emit("end", "We did it!");
+  res.send("We did it!");
 });
 
 //Whenever someone connects this gets executed
