@@ -9,6 +9,10 @@ app.get("/", function (req, res) {
   res.send("It really whips the llamas ass!");
 });
 
+app.get("/end", function (req, res) {
+  io.emit("end", "We did it!");
+});
+
 //Whenever someone connects this gets executed
 io.on("connection", function (socket) {
   console.log("A user connected");
